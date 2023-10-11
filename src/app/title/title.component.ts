@@ -1,21 +1,26 @@
-import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-title',
   templateUrl: './title.component.html',
   styleUrls: ['./title.component.scss']
 })
-export class TitleComponent implements OnInit, OnChanges {
+export class TitleComponent implements OnInit, OnChanges,OnDestroy {
 
-  @Input() public title:string = "ola mundo"
+  public title:string = "ola mundo"
 
   constructor() { }
 
   ngOnInit(): void {
     
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log ('foi alterado com sucesso')
+  ngOnChanges ():void {
+
   }
+
+  ngOnDestroy(): void {
+    alert ("ele foi destruido");
+  }
+  
 
 }

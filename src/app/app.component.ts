@@ -1,41 +1,23 @@
-import { Component, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   template: `
-    {{ valor }}
-    <button (click)="adicionar()">Clica em mim</button>
+    <app-title *ngIf = "destruir"></app-title>
+    <br>
+    <button (click)="destruirComponent()">Click do thanos</button>
     <router-outlet></router-outlet>
-    `
+  `
 })
-export class AppComponent implements OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
-  public valor:number = 1
-  public adicionar():number{
-    return this.valor +=1
-  }
+export class AppComponent implements OnInit{
+  public destruir:boolean = true;
   constructor() { }
 
   ngOnInit(): void {
   
   }
-
-  ngAfterContentChecked(): void {
-    console.log ('ngAfterContentChecked')
+  public destruirComponent(){
+    this.destruir = false;
   }
 
-  ngAfterContentInit(): void {
-    console.log ('ngAfterContentInit')
-  }
-
-  ngAfterViewChecked(): void {
-    console.log ('ngAfterViewChecked')
-  }
-
-  ngAfterViewInit(): void {
-    console.log ('ngAfterViewInit')
-  }
-
-  ngDoCheck(): void {
-    console.log ('ngDoCheck')
-  }
 }
