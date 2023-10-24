@@ -23,7 +23,6 @@ export class DatabidingComponent implements OnInit {
 
   public position: {x: number, y: number} = {x: 0, y: 0}
   public MouseMoveTeste (valor: MouseEvent){
-    console.log (valor)
     this.position.x = valor.offsetX
     this.position.y = valor.offsetY
   }
