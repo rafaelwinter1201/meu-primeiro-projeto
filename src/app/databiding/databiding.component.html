@@ -4,3 +4,20 @@
 <p>{{ nome }} tem mais de 14 anos?</p>
 <p>{{ idade > 14 }}</p>
 
+<hr>
+
+<h2>Property Bindings</h2>
+<button [disabled]="CheckedDisabled">Button</button>
+<br>
+<br>
+<hr>
+<img [src]="ImgSrc">
+<br>
+<br>
+<hr>
+<h2>Event Binding</h2>
+<button (click)="AlertaInfo($event)">Evento</button>
+
+<div (mousemove) = "MouseMoveTeste($event)" style = "background-color: aqua; width: 300px;height: 300px;"></div>
+<br>
+{{ position.x }} - {{ position.y }}
