@@ -15,9 +15,26 @@
 <br>
 
 <ul>
-    <li *ngFor = "let item of list; let i = index">[{{ i }}] - {{ item.nome }} - {{ item.idade }}</li>
+    <li *ngFor = "let item of list; let i = index;" (click) = "OnClickEventList(i)">
+        [{{ i }}] - {{ item.nome }} - {{ item.idade }}
+    </li>
 </ul>
 <input [(ngModel)] = name>
 <input [(ngModel)] = year>
 <button (click)="OnClickAddList(name,year)">Add</button>
+
+<br><hr>
+<br>
+<input type="text" [(ngModel)] = "nome">
+<div [ngSwitch] = "nome">
+    <p *ngSwitchCase = "'Rafael'">
+        Rafael
+    </p>
+    <p *ngSwitchCase = "'Natalia'">
+        Natalia
+    </p>
+    <p *ngSwitchDefault = "'Natalia'">
+        Natalia
+    </p>
+</div>
   

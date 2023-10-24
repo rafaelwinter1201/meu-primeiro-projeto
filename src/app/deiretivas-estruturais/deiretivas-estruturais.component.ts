@@ -32,10 +32,15 @@ export class DeiretivasEstruturaisComponent implements OnInit{
       this.conditionClick = true
     }
   }
+  public OnClickEventList (event: number){
+    this.list.slice(event, 1)
+  }
 
-  public name:any 
-  public year:any
-  public OnClickAddList(name: any,year: any){
+  public name!: string; 
+  public year!:number;
+  public OnClickAddList(name: string,year: number){
     this.list.push({nome: name , idade: year })
   }
+
+  public nome: string = 'Rafael'
 }

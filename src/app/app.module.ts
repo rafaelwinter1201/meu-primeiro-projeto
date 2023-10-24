@@ -7,13 +7,15 @@ import { TitleComponent } from './title/title.component';
 import { DatabidingComponent } from './databiding/databiding.component';
 import { FormsModule } from '@angular/forms';
 import { DeiretivasEstruturaisComponent } from './deiretivas-estruturais/deiretivas-estruturais.component';
+import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
     DatabidingComponent,
-    DeiretivasEstruturaisComponent
+    DeiretivasEstruturaisComponent,
+    DiretivasAtributosComponent
   ],
   imports: [
     BrowserModule,
