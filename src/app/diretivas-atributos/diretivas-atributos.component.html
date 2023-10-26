@@ -1,7 +1,9 @@
-<!--<p [ngClass] = "{ 'active': valor, 'disable': !valor}">ng Class</p>
+<ng-content select = "h1"></ng-content>
+
+<p [ngClass] = "{ 'active': valor, 'disable': !valor}">ng Class</p>
 <p [ngStyle] = "{ 'height': heigthpx, 'background': backgroudColor }">ng Style</p>
 <br>
-<hr> -->
+<hr> 
 
 <ng-template ngFor let-item [ngForOf]="list">
     <p>
@@ -11,3 +13,5 @@
 
 <input [(ngModel)] = "nome" > 
 <button (click) = "salvar()">Salvar</button>
+
+<ng-content select = "hr"></ng-content>

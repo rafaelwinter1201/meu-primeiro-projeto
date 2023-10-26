@@ -9,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
     -->
     <!--<app-deiretivas-estruturais></app-deiretivas-estruturais>-->
 
-    <app-diretivas-atributos></app-diretivas-atributos>
+    <app-diretivas-atributos>
+      <h1> Olá mundo </h1>
+      <hr>
+    </app-diretivas-atributos>
     <router-outlet></router-outlet>
   `
 })
