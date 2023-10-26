@@ -10,23 +10,17 @@ export class DiretivasAtributosComponent implements OnInit{
   public valor: boolean = true
   public heigthpx: string = "20px"
   public backgroudColor: string = "aquamarine"
+
+  public nome: string = ""
+  public list: Array < { nome:string}> = [{nome: "Rafael"}] ;
   
   constructor() { };
   ngOnInit(): void {
-    setInterval ( () => {
-      if(this.heigthpx == "20px"){
-        this.heigthpx = "50px";
-        this.backgroudColor = "aquamarine";
-      }else{
-        this.heigthpx = "20px";
-        this.backgroudColor = "rgb(44, 158, 40)";
-      }
-
-      if(this.valor){
-        this.valor = false
-      }else{
-        this.valor = true
-      }
-    },2000)
+    
+  }
+  
+  public salvar (){
+    this.list.push({ nome: this.nome});
+    this.nome = ""
   }
 }
