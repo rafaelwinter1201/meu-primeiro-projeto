@@ -12,7 +12,7 @@ import { OutputComponent } from './output/output.component';
     InputComponent,
     OutputComponent
   ],
-  exports:[
+  exports: [
     NewComponentComponent,
     InputComponent,
     OutputComponent

@@ -1,4 +1,4 @@
-<p *ngIf = "condition; else elseBlock">True</p>
+<p *ngIf="condition; else elseBlock">True</p>
 
 <ng-template #elseBlock>
     <p>
@@ -6,8 +6,8 @@
     </p>
 </ng-template>
 <hr>
-<p *ngIf = "conditionClick">True</p>
-<p *ngIf = "!conditionClick">False</p>
+<p *ngIf="conditionClick">True</p>
+<p *ngIf="!conditionClick">False</p>
 
 <button (click)="OnClick()">Clique aqui</button>
 
@@ -15,26 +15,26 @@
 <br>
 
 <ul>
-    <li *ngFor = "let item of list; let i = index;" (click) = "OnClickEventList(i)">
+    <li *ngFor="let item of list; let i = index;" (click)="OnClickEventList(i)">
         [{{ i }}] - {{ item.nome }} - {{ item.idade }}
     </li>
 </ul>
-<input [(ngModel)] = name>
-<input [(ngModel)] = year>
+<input [(ngModel)]=name>
+<input [(ngModel)]=year>
 <button (click)="OnClickAddList(name,year)">Add</button>
 
-<br><hr>
 <br>
-<input type="text" [(ngModel)] = "nome">
-<div [ngSwitch] = "nome">
-    <p *ngSwitchCase = "'Rafael'">
+<hr>
+<br>
+<input type="text" [(ngModel)]="nome">
+<div [ngSwitch]="nome">
+    <p *ngSwitchCase="'Rafael'">
         Rafael
     </p>
-    <p *ngSwitchCase = "'Natalia'">
+    <p *ngSwitchCase="'Natalia'">
         Natalia
     </p>
-    <p *ngSwitchDefault = "'Natalia'">
+    <p *ngSwitchDefault="'Natalia'">
         Natalia
     </p>
 </div>
-  

@@ -24,25 +24,36 @@ import { Component, OnInit } from '@angular/core';
    
     <app-input [contador] = "addValue"></app-input>
     <br>
-    <button (click) = "add()">Add</button>
+    <button (click) = "add($event)">Add</button>
     -->
-    <app-output></app-output>
+
+    <ng-template [ngIf]="getDados">
+      <h1>{{ getDados.nome }}</h1>
+      <h2>{{ getDados.idade }}</h2>
+    </ng-template>
+    <app-output (enviarDados)="setDados($event)"></app-output>
     <router-outlet></router-outlet>
   `
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   public destruir: boolean = true
 
   public addValue: number = 10;
 
-  public add (){
+  public getDados: { nome: string, idade: number } | undefined
+
+  public add() {
     this.addValue += 1
+  }
+
+  public setDados(event: { nome: string, idade: number }) {
+    this.getDados = event;
   }
 
   constructor() { }
 
   ngOnInit(): void {
-  
+
   }
 
 }

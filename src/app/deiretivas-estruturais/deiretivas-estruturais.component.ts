@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './deiretivas-estruturais.component.html',
   styleUrls: ['./deiretivas-estruturais.component.scss']
 })
-export class DeiretivasEstruturaisComponent implements OnInit{
+export class DeiretivasEstruturaisComponent implements OnInit {
   public condition: boolean = true
   public conditionClick: boolean = true
 
-  public list: Array < {nome:string, idade: number} > = [
+  public list: Array<{ nome: string, idade: number }> = [
     { nome: "Rafael", idade: 21 },
     { nome: "João", idade: 28 },
     { nome: "Nathalia", idade: 20 }
@@ -17,29 +17,29 @@ export class DeiretivasEstruturaisComponent implements OnInit{
   constructor() { }
 
   ngOnInit(): void {
-    setInterval( ()=> {
-      if(this.condition){
+    setInterval(() => {
+      if (this.condition) {
         this.condition = false
-      }else {
+      } else {
         this.condition = true
       }
     }, 2000)
   }
-  public OnClick(){
-    if(this.conditionClick){
+  public OnClick() {
+    if (this.conditionClick) {
       this.conditionClick = false
-    }else {
+    } else {
       this.conditionClick = true
     }
   }
-  public OnClickEventList (event: number){
+  public OnClickEventList(event: number) {
     this.list.slice(event, 1)
   }
 
-  public name!: string; 
-  public year!:number;
-  public OnClickAddList(name: string,year: number){
-    this.list.push({nome: name , idade: year })
+  public name!: string;
+  public year!: number;
+  public OnClickAddList(name: string, year: number) {
+    this.list.push({ nome: name, idade: year })
   }
 
   public nome: string = 'Rafael'

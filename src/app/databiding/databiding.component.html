@@ -14,7 +14,7 @@
 <h2>Event Binding</h2>
 <button (click)="AlertaInfo($event)">Evento</button>
 
-<div (mousemove) = "MouseMoveTeste($event)" style = "width: max-content;"><img [src]="ImgSrc"></div>
+<div (mousemove)="MouseMoveTeste($event)" style="width: max-content;"><img [src]="ImgSrc"></div>
 <br>
 {{ position.x }} - {{ position.y }}
 
@@ -22,5 +22,5 @@
 <br>
 <hr>
 <h2>Two Way Binding</h2>
-<input [(ngModel)] = nome><br>
+<input [(ngModel)]=nome><br>
 {{ nome }}

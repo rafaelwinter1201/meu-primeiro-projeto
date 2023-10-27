@@ -7,22 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DatabidingComponent implements OnInit {
   ngOnInit(): void {
-    
+
   }
   constructor() { };
 
-  public nome:string  = "rafael";
-  public idade:number  = 21;
+  public nome: string = "rafael";
+  public idade: number = 21;
 
-  public CheckedDisabled: boolean = false; 
-  public ImgSrc: string = "https://t.ctcdn.com.br/HfaAfdSP0yElfXWQelkeEQvkgyU=/1000x563/smart/i257652.jpeg"; 
+  public CheckedDisabled: boolean = false;
+  public ImgSrc: string = "https://t.ctcdn.com.br/HfaAfdSP0yElfXWQelkeEQvkgyU=/1000x563/smart/i257652.jpeg";
 
   public AlertaInfo(valor: MouseEvent) {
     console.log(valor)
   }
 
-  public position: {x: number, y: number} = {x: 0, y: 0}
-  public MouseMoveTeste (valor: MouseEvent){
+  public position: { x: number, y: number } = { x: 0, y: 0 }
+  public MouseMoveTeste(valor: MouseEvent) {
     this.position.x = valor.offsetX
     this.position.y = valor.offsetY
   }
